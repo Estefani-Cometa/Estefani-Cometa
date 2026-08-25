@@ -160,7 +160,7 @@ https://github.com/Estefani-Cometa
 [Agregar LinkedIn]
 
 **Email profesional:**  
-[Agregar correo]
+stefhanycometa@gmail.com
 
 ---
 
