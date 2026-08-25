@@ -98,7 +98,7 @@ A technological ecosystem designed to connect:
 
 🟢 In development
 
-[View Flash Bites →](#)
+[View Flash Bites →](https://github.com/Estefani-Cometa/Flash-Bites.git)
 
 ---
 
@@ -124,7 +124,7 @@ The project follows a problem-solving process:
 
 🟢 In development
 
-[View Vialtros →](#)
+[View Vialtros →](https://github.com/Axwyk/Vialtros.git)
 
 ---
 
