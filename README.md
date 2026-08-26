@@ -157,7 +157,8 @@ Estoy interesada en oportunidades relacionadas con:
 https://github.com/Estefani-Cometa
 
 **LinkedIn:**  
-[Agregar LinkedIn]
+[<div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="francy-estefani-cometa-alomia-a071083b5" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/francy-estefani-cometa-alomia-a071083b5?trk=profile-badge">FRANCY ESTEFANI COMETA ALOMIA</a></div>
+              ]
 
 **Email profesional:**  
 stefhanycometa@gmail.com
