@@ -140,16 +140,12 @@ Validates foundational knowledge of AI and Machine Learning concepts, terminolog
 ---
 
 ## 📫 Contact
-
-**GitHub:**
-https://github.com/Estefani-Cometa
-
-**LinkedIn:**
-[Francy Estefani Cometa Alomia](https://www.linkedin.com/in/francy-estefani-cometa/)
-
-**Email:**
-stefhanycometa@gmail.com
-
+ 
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Estefani-Cometa)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/francy-estefani-cometa/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:stefhanycometa@gmail.com)
+ 
 ---
-
+ 
 > "Technology has value when it turns real problems into useful solutions."
+ 
