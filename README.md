@@ -1,34 +1,29 @@
-# 👋 Hola, soy Estefani Cometa
 
-### Estudiante de Tecnología en Desarrollo de Software | IA · Automatización · Desarrollo Web
+#  👋 Hi, I'm Francy Cometa
 
-Construyo soluciones de software orientadas a resolver problemas reales de negocio y operación.
+### Software Development Technology Student | Backend · Full-Stack · Applied AI
 
-Actualmente estoy fortaleciendo mis habilidades en desarrollo backend, frontend, APIs, bases de datos e inteligencia artificial, mientras desarrollo proyectos que combinan tecnología con necesidades reales.
-
----
-
-## 🚀 Sobre mí
-
-Soy estudiante de **Tecnología en Desarrollo de Software**, interesada en transformar problemas reales en soluciones tecnológicas funcionales, escalables y fáciles de utilizar.
-
-Mi enfoque actual está principalmente en:
-
-- Desarrollo de aplicaciones web
-- Desarrollo backend y APIs REST
-- Inteligencia Artificial aplicada
-- Automatización de procesos
-- Bases de datos
-- Arquitectura de software
-- Integración de servicios
-
-Me interesa especialmente crear tecnología que no solo funcione, sino que **genere valor para personas, negocios y organizaciones**.
+I build software solutions aimed at solving real business and operational problems.
 
 ---
 
-## 🧠 Stack tecnológico
+## 🚀 About Me
 
-### Lenguajes
+I'm a Software Development Technology student interested in turning real problems into functional, scalable, and easy-to-use technology solutions.
+
+My current focus is on:
+
+- Backend development and REST APIs
+- Applied Artificial Intelligence
+- Full-stack development
+
+I'm especially interested in building technology that doesn't just work, but **creates real value for people and businesses**.
+
+---
+
+## 🧠 Tech Stack
+
+### Languages
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
@@ -48,18 +43,18 @@ Me interesa especialmente crear tecnología que no solo funcione, sino que **gen
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
-### Inteligencia Artificial
+### Artificial Intelligence
 
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square)
 ![RAG](https://img.shields.io/badge/RAG-5E35B1?style=flat-square)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6B6B?style=flat-square)
 
-### Bases de datos
+### Databases
 
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
 
-### Herramientas y DevOps
+### Tools & DevOps
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
@@ -68,101 +63,93 @@ Me interesa especialmente crear tecnología que no solo funcione, sino que **gen
 
 ---
 
-## ⭐ Proyectos destacados
+## ⭐ Featured Projects
 
 ### 🤖 Flash Bites — Business AI Agent
 
-Sistema modular orientado a la automatización de pequeños negocios mediante inteligencia artificial.
+A system for small business automation powered by artificial intelligence.
 
-**Incluye:**
+**Includes:**
 
-- Gestión de productos, clientes y pedidos
-- API REST
-- Chatbot con IA
-- Arquitectura RAG
-- Integración frontend/backend
-- Documentación Swagger
-- Contenedores Docker
-- Despliegue en Railway
+- Product, customer, and order management
+- REST API
+- AI chatbot
+- RAG architecture
+- Frontend/backend integration
+- Swagger documentation
+- Docker containers
+- Deployed on Railway
 
 **Stack:** Python · FastAPI · React · Vite · Tailwind CSS · LangChain · ChromaDB · SQLite · Docker
 
-👉 [Ver proyecto](https://github.com/Estefani-Cometa/Flash-Bites)
+👉 [View project](https://github.com/Estefani-Cometa/Flash-Bites)
 
 ---
 
-### 🚌 Vialtros — Plataforma SaaS de Gestión de Rutas
+### 🚌 Vialtros — Route Management SaaS Platform
 
-Plataforma para la gestión de rutas y seguimiento de transporte con diferentes roles de usuario y comunicación en tiempo real.
+A platform for route management and transportation tracking with role-based access and real-time communication. Academic collaborative project.
 
-**Incluye:**
+**Includes:**
 
-- Autenticación JWT
-- Control de acceso por roles
-- Dashboard administrativo
-- Gestión de usuarios, conductores y rutas
-- Tracking en tiempo real mediante WebSockets
-- API REST
-- Pipeline CI/CD
-- Arquitectura frontend/backend
+- JWT authentication
+- Role-based access control
+- Admin dashboard
+- User, driver, and route management
+- Real-time tracking via WebSockets
+- REST API
+- CI/CD pipeline
 
 **Stack:** Django · Django REST Framework · React · Tailwind CSS · WebSockets · JWT · PostgreSQL · Redis · GitHub Actions
 
-👉 [Ver proyecto](https://github.com/Axwyk/Vialtros)
+👉 [View project](https://github.com/Axwyk/Vialtros)
 
 ---
 
-## 📚 Actualmente aprendiendo
+### 🏥 MediFlow — Clinical Document Triage & Routing Agent
 
-- Arquitectura de software
-- Inteligencia Artificial aplicada
-- Automatización de procesos
-- PostgreSQL
-- Docker
-- Testing
-- CI/CD
-- Cloud deployment
-- Inglés técnico
+*In progress — ONE G10 Hackathon (No Country), HealthTech sector.*
+
+A system for the intake, classification, extraction, and routing of clinical documents, with confidence scoring and human-in-the-loop review.
+
+**My role:** Backend Developer / AI & Core Logic
+
+👉 Repository coming soon
 
 ---
 
-## 🎯 Áreas de interés profesional
+## 📜 Certifications
 
-Estoy interesada en oportunidades relacionadas con:
-
-- Desarrollo de software
-- Desarrollo backend
-- Desarrollo frontend
-- APIs y servicios web
-- Inteligencia Artificial
-- Automatización
-- QA / Testing
-- Soporte y sistemas
-- Tecnología aplicada a negocios
+**Oracle Cloud Infrastructure (OCI) AI Foundations Associate** — Oracle University (September 2024)
+Validates foundational knowledge of AI and Machine Learning concepts, terminology, and the AI services available within Oracle Cloud Infrastructure.
 
 ---
 
-## 📈 Actualmente trabajando en
+## 🔭 Currently Working On
 
-🔹 Mejorar mis proyectos existentes  
-🔹 Construir nuevas soluciones con IA  
-🔹 Fortalecer mis conocimientos de arquitectura y desarrollo de software  
-🔹 Construir un portafolio orientado a oportunidades profesionales  
+🔹 MediFlow — ONE G10 Hackathon (HealthTech / AI Agent)
+🔹 Strengthening documentation and architecture for Flash Bites and Vialtros
+🔹 Building a portfolio focused on backend + applied AI
 
 ---
 
-## 📫 Contacto
+## 📚 Education
 
-**GitHub:**  
+**Software Development Technology** — Universidad del Valle, Buenaventura campus (2024–2027)
+
+---
+
+## 📫 Contact
+
+**GitHub:**
 https://github.com/Estefani-Cometa
 
-**LinkedIn:**  
-[<div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="francy-estefani-cometa-alomia-a071083b5" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/francy-estefani-cometa-alomia-a071083b5?trk=profile-badge">FRANCY ESTEFANI COMETA ALOMIA</a></div>
-              ]
+**LinkedIn:**
+[Francy Estefani Cometa Alomia](https://www.linkedin.com/in/francy-estefani-cometa/)
 
-**Email profesional:**  
+**Email:**
 stefhanycometa@gmail.com
 
 ---
 
-> "La tecnología tiene valor cuando convierte problemas reales en soluciones útiles."
+> "Technology has value when it turns real problems into useful solutions."
