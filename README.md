@@ -1,5 +1,5 @@
 
-#  👋 Hi, I'm Francy Cometa
+#  👋 Hi, I'm Estefani Cometa
 
 ### Software Development Technology Student | Backend · Full-Stack · Applied AI
 
