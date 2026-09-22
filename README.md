@@ -1,3 +1,4 @@
+<div align="center">
 
 #  👋 Hi, I'm Estefani Cometa
 
@@ -6,6 +7,9 @@
 I build software solutions aimed at solving real business and operational problems.
 
 ---
+
+</div>
+
 
 ## 🚀 About Me
 
@@ -61,14 +65,19 @@ I'm especially interested in building technology that doesn't just work, but **c
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 
 ---
-
+<div align="center">
 
 ## 📫 Contact
  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/francy-estefani-cometa/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:stefhanycometa@gmail.com)
+
  
 ---
  
 > "Technology has value when it turns real problems into useful solutions."
  
+
+---
+
+</div>
+
