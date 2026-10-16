@@ -24,7 +24,6 @@
     --pink-soft: #f08ac4;
     --violet: #9474ff;
     --cyan: #55dbf5;
-    --paper: #efeae0;
 
     /* Serif editorial para títulos, DM Sans para lectura, DM Mono para etiquetas */
     --serif: 'Instrument Serif', 'Times New Roman', serif;
@@ -948,13 +947,14 @@ h1 em,
     align-items: end;
     padding: clamp(32px, 6vw, 72px);
     border-radius: 22px;
-    background: var(--paper);
-    color: #17141f;
+    border: 1px solid rgba(148, 116, 255, .24);
+    background: linear-gradient(135deg, #11162a, #15172d 58%, #101a2b);
+    color: var(--text);
 }
 
 .contact .eyebrow {
     margin: 0 0 18px;
-    color: #6b4a63;
+    color: var(--cyan);
 }
 
 .contact h2 {
@@ -965,13 +965,13 @@ h1 em,
 }
 
 .contact h2 em {
-    color: #c23d8f;
+    color: var(--pink-soft);
 }
 
 .contact p {
     max-width: 46ch;
     margin-top: 20px;
-    color: #4a4352;
+    color: var(--muted);
 }
 
 .social-links {
@@ -1000,16 +1000,16 @@ h1 em,
 }
 
 .contact-actions .button {
-    border-color: #17141f;
-    color: #17141f;
+    border-color: rgba(199, 200, 220, .35);
+    color: var(--text);
 }
 
 .contact-actions .button::before {
-    background: #17141f;
+    background: var(--pink);
 }
 
 .contact-actions .button:hover {
-    color: #fff;
+    color: #1a0b16;
 }
 
 .footer {
@@ -1247,21 +1247,6 @@ h1 em,
     }
 }
 
-@keyframes veil {
-    0% {
-        transform: translateY(-100%);
-    }
-
-    45%,
-    55% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(100%);
-    }
-}
-
 @keyframes intro-pulse {
     50% {
         transform: scale(1.12) rotate(6deg);
@@ -1382,20 +1367,6 @@ html:not(.js) .intro {
     transform: scaleX(var(--p, 0));
     transform-origin: left;
 }
-
-.veil {
-    position: fixed;
-    inset: 0;
-    z-index: 90;
-    pointer-events: none;
-    transform: translateY(-100%);
-    background: linear-gradient(160deg, #1b1240, #0b0d20 60%, #12233a);
-}
-
-.veil.is-running {
-    animation: veil .8s var(--ease) both;
-}
-
 
 /* 14. CURSOR Y EFECTOS ===================================================== */
 #sky {

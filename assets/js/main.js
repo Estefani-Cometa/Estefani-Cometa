@@ -418,17 +418,12 @@ const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
   // Certificados sin URL real todavía: no saltan al inicio de la página
   document.querySelectorAll('a[href="#"]').forEach((a) => a.addEventListener('click', (e) => e.preventDefault()));
 
-  // Cortina que cruza la pantalla al cambiar de sección desde el menú
-  const veil = document.querySelector('.veil');
+  // Desplazamiento suave entre secciones; el navegador respeta reduced motion.
   document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach((a) => a.addEventListener('click', (e) => {
     const target = document.querySelector(a.getAttribute('href'));
-    if (!target || reduceMotion || !veil) return;
+    if (!target) return;
     e.preventDefault();
-    veil.classList.remove('is-running'); void veil.offsetWidth; veil.classList.add('is-running');
-    setTimeout(() => {
-      target.scrollIntoView({ behavior: 'auto' });
-      history.replaceState(null, '', a.getAttribute('href'));
-    }, 360);
-    veil.addEventListener('animationend', () => veil.classList.remove('is-running'), { once: true });
+    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    history.replaceState(null, '', a.getAttribute('href'));
   }));
 })();
