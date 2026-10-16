@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 500" role="img" aria-labelledby="title description">
+  <title id="title">Identidad de Estefani Cometa</title>
+  <desc id="description">Ilustración abstracta con las iniciales EC y órbitas de colores.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#11182e"/>
+      <stop offset=".58" stop-color="#25113b"/>
+      <stop offset="1" stop-color="#11182e"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f45db4"/>
+      <stop offset="1" stop-color="#55dbf5"/>
+    </linearGradient>
+    <radialGradient id="light">
+      <stop offset="0" stop-color="#9474ff" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#9474ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="420" height="500" fill="url(#background)"/>
+  <circle cx="287" cy="192" r="205" fill="url(#light)"/>
+  <ellipse cx="210" cy="252" rx="242" ry="100" fill="none" stroke="url(#glow)" stroke-opacity=".58" stroke-width="2" transform="rotate(-28 210 252)"/>
+  <ellipse cx="210" cy="252" rx="175" ry="245" fill="none" stroke="#55dbf5" stroke-opacity=".2" stroke-width="1.5" transform="rotate(23 210 252)"/>
+  <circle cx="54" cy="149" r="6" fill="#f45db4"/>
+  <circle cx="363" cy="344" r="7" fill="#55dbf5"/>
+  <path d="m321 92 4 7 8 1-6 5 2 8-8-4-7 4 2-8-6-5 8-1z" fill="#f5f3ff" fill-opacity=".9"/>
+  <text x="210" y="296" fill="#55dbf5" font-family="Manrope, Arial, sans-serif" font-size="126" font-weight="800" letter-spacing="-12" text-anchor="middle">EC</text>
+  <path d="M110 352h200" stroke="url(#glow)" stroke-opacity=".5"/>
+</svg>
