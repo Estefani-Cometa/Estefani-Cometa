@@ -6,7 +6,7 @@
 
 Junior developer from Buenaventura, Colombia. I build software that solves real business and operational problems, with a background in administration and customer service that shapes how I think about the people who use it.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-f45db4?style=for-the-badge&logo=googlechrome&logoColor=white)](#portfolio-website)
+[![Portfolio](https://img.shields.io/badge/Portfolio-f45db4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://estefani-cometa.github.io/Estefani-Cometa/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/francy-estefani-cometa/)
 [![Email](https://img.shields.io/badge/Email-55dbf5?style=for-the-badge&logo=gmail&logoColor=111)](mailto:stefhanycometa@gmail.com)
 
