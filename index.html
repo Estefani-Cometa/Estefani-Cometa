@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b18">
+  <meta name="description"
+    content="Portafolio de Estefani Cometa, desarrolladora de software en formación. Python, FastAPI, React e IA aplicada.">
+  <title>Estefani Cometa — Desarrolladora de software</title>
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M28 3l2.3 7.2L37.5 12.5l-7.2 2.3L28 22l-2.3-7.2L18.5 12.5l7.2-2.3L28 3Z' fill='%23f45db4'/%3E%3Cpath d='M4 36c8-1 15-7 19-15' stroke='%2355dbf5' stroke-width='2.5' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='7' cy='14' r='2' fill='%2355dbf5'/%3E%3C/svg%3E">
+
+  <!-- Fuentes: Instrument Serif (títulos), DM Sans (texto), DM Mono (etiquetas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+  <!-- Capas globales: entrada, progreso, transición, cielo, efectos y cursor -->
+  <div class="intro" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="veil" aria-hidden="true"></div>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span></span></div>
+
+  <a class="skip-link" href="#sobre-mi">Saltar al contenido</a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="topbar">
+    <nav class="nav shell" aria-label="Navegación principal">
+      <a class="brand" href="#home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="logo-g" x1="4" y1="37" x2="36" y2="4" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f45db4" />
+                <stop offset=".55" stop-color="#a27bff" />
+                <stop offset="1" stop-color="#55dbf5" />
+              </linearGradient>
+            </defs>
+            <path d="M4 36c8-1 15-7 19-15" stroke="url(#logo-g)" stroke-width="2" stroke-linecap="round" opacity=".5" />
+            <path d="M9 37c8-1 14-6 18-13" stroke="url(#logo-g)" stroke-width="1.4" stroke-linecap="round"
+              opacity=".3" />
+            <path d="M28 3l2.3 7.2L37.5 12.5l-7.2 2.3L28 22l-2.3-7.2L18.5 12.5l7.2-2.3L28 3Z" fill="url(#logo-g)" />
+            <path d="M7 14l7-8" stroke="#f7f4ff" stroke-width=".8" opacity=".4" />
+            <circle cx="7" cy="14" r="1.7" fill="#55dbf5" />
+            <circle cx="14" cy="6" r="1.3" fill="#f7f4ff" />
+          </svg></span>
+        Estefani Cometa
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span class="menu-label">Menú</span><span class="menu-icon" aria-hidden="true">☰</span>
+      </button>
+
+      <div class="nav-links" id="primary-menu">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a href="#literatura">Literatura</a>
+        <a class="nav-cta magnetic" href="#contacto">Hablemos ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO (centrado, sin imagen) ========== -->
+    <section class="hero shell" id="home">
+      <div class="hero-orbits" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <div class="hero-copy-column">
+        <div class="availability" style="--i:0"><span class="pulse"></span> Buenaventura · Colombia</div>
+        <p class="hero-kicker" style="--i:1">Hola, soy</p>
+        <h1 class="type-title hero-title" style="--i:2">Estefani<br><em>Cometa.</em></h1>
+        <p class="hero-copy" style="--i:3">Estudio Tecnología en Desarrollo de Software en la Universidad del Valle.
+          Trabajo con Python, FastAPI y React, y me interesa la IA aplicada. Antes de programar pasé más de dos años en
+          administración y atención al cliente, y eso me enseñó a pensar en quién va a usar lo que construyo.</p>
+
+        <div class="hero-actions" style="--i:4">
+          <a class="button primary magnetic" href="#proyectos">Ver mis proyectos <span aria-hidden="true">↘</span></a>
+          <button class="button cv-trigger magnetic" type="button" data-cursor="Abrir">Ver CV <span
+              aria-hidden="true">↗</span></button>
+          <a class="button magnetic" href="assets/cv/CV-Francy-Estefani-Cometa.pdf" download
+            data-cursor="Bajar">Descargar
+            CV <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="hero-socials" style="--i:5" aria-label="Redes sociales">
+          <a class="social-icon magnetic" href="https://github.com/Estefani-Cometa" target="_blank"
+            rel="noopener noreferrer" aria-label="GitHub de Estefani" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.04c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.62 1.22 3.26.93.1-.73.4-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.21 1.16-2.99-.12-.29-.5-1.42.11-2.96 0 0 .95-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.1-1.43 3.05-1.14 3.05-1.14.61 1.54.23 2.67.11 2.96.72.78 1.16 1.77 1.16 2.99 0 4.3-2.62 5.24-5.12 5.52.4.35.76 1.03.76 2.08V22c0 .29.2.64.77.53A11.1 11.1 0 0 0 12 .9Z" />
+            </svg>
+          </a>
+          <a class="social-icon magnetic" href="https://www.linkedin.com/in/francy-estefani-cometa" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn de Estefani" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM8.1 18.9H5.13V9.34H8.1v9.56ZM6.62 8.03a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44ZM18.9 18.9h-2.96v-4.65c0-1.1-.02-2.52-1.54-2.52-1.55 0-1.79 1.2-1.79 2.44v4.73H9.65V9.34h2.84v1.3h.04c.4-.75 1.36-1.54 2.8-1.54 3 0 3.57 1.97 3.57 4.53v5.27Z" />
+            </svg>
+          </a>
+          <a class="social-icon magnetic" href="https://www.instagram.com/estefanicometa7/" target="_blank"
+            rel="noopener noreferrer" aria-label="Instagram de Estefani" title="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm4.5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-foot" style="--i:6"><span>Python · FastAPI · React</span><span>IA aplicada · RAG</span></div>
+      </div>
+    </section>
+
+
+    <!-- ========== 01 · SOBRE MÍ ========== -->
+    <section class="section shell" id="sobre-mi">
+      <div class="section-head reveal">
+        <div class="eyebrow">Sobre mí</div>
+        <h2 class="type-title">Aprendo haciendo,<br><em>y ya tengo cosas hechas.</em></h2>
+      </div>
+
+      <div class="about-grid reveal">
+        <p class="about-lead">Estoy en sexto semestre y ya participo en proyectos de verdad: una app con asistente de
+          IA, plataformas en equipo y un agente para documentos clínicos.</p>
+        <div class="about-body">
+          <p>Trabajo sobre todo con Python y FastAPI en el backend y con React en la interfaz. También me gusta la IA
+            aplicada: RAG, LangChain y ChromaDB para que un asistente responda con información real. Sigo aprendiendo, y
+            prefiero decirlo claro: lo que todavía no domino lo estoy practicando.</p>
+          <p>Antes de programar estuve en caja, inventarios, supervisión de personal y atención al cliente. De ahí me
+            quedó el orden, el trato con la gente y el hábito de preguntar qué problema real hay detrás de cada pedido.
+          </p>
+          <div class="chips">
+            <span class="chip">En formación · 6.º semestre</span><span class="chip">Full stack</span><span
+              class="chip">IA / RAG</span><span class="chip">Trabajo en equipo</span><span class="chip">Inglés
+              intermedio</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-heading reveal">
+        <div>
+          <div class="eyebrow">Herramientas</div>
+          <h3>Con qué trabajo</h3>
+        </div>
+        <div class="carousel-controls" aria-label="Cambiar de área">
+          <button class="carousel-button magnetic" type="button" data-step="-1" aria-label="Área anterior">←</button>
+          <button class="carousel-button magnetic" type="button" data-step="1" aria-label="Área siguiente">→</button>
+        </div>
+      </div>
+
+      <div class="tech reveal">
+        <div class="tech-tabs" role="tablist" aria-label="Áreas técnicas">
+          <button class="tech-tab" role="tab" id="tab-backend" aria-controls="panel-backend" aria-selected="true"
+            type="button"><span class="tech-number">01</span>Backend</button>
+          <button class="tech-tab" role="tab" id="tab-frontend" aria-controls="panel-frontend" aria-selected="false"
+            type="button"><span class="tech-number">02</span>Frontend</button>
+          <button class="tech-tab" role="tab" id="tab-ia" aria-controls="panel-ia" aria-selected="false"
+            type="button"><span class="tech-number">03</span>IA aplicada</button>
+          <button class="tech-tab" role="tab" id="tab-datos" aria-controls="panel-datos" aria-selected="false"
+            type="button"><span class="tech-number">04</span>Datos</button>
+          <button class="tech-tab" role="tab" id="tab-herramientas" aria-controls="panel-herramientas"
+            aria-selected="false" type="button"><span class="tech-number">05</span>Herramientas</button>
+        </div>
+
+        <div class="tech-stage">
+          <article class="tech-panel is-active" role="tabpanel" id="panel-backend" aria-labelledby="tab-backend">
+            <h4>Backend</h4>
+            <p>APIs, validación de datos y reglas de negocio. Es donde más he construido hasta ahora.</p>
+            <div class="tech-list"><span>Python</span><span>FastAPI</span><span>Pydantic</span><span>Django
+                REST</span><span>NestJS</span><span>OpenAPI</span></div>
+          </article>
+          <article class="tech-panel" role="tabpanel" id="panel-frontend" aria-labelledby="tab-frontend">
+            <h4>Frontend</h4>
+            <p>Interfaces claras, responsivas y conectadas a APIs reales.</p>
+            <div class="tech-list"><span>React</span><span>JavaScript</span><span>Vite</span><span>Tailwind
+                CSS</span><span>HTML · CSS</span></div>
+          </article>
+          <article class="tech-panel" role="tabpanel" id="panel-ia" aria-labelledby="tab-ia">
+            <h4>IA aplicada</h4>
+            <p>Asistentes que responden con información de documentos reales. Un área en la que sigo aprendiendo.</p>
+            <div class="tech-list"><span>LangChain</span><span>RAG</span><span>ChromaDB</span><span>Prompt design</span>
+            </div>
+          </article>
+          <article class="tech-panel" role="tabpanel" id="panel-datos" aria-labelledby="tab-datos">
+            <h4>Datos</h4>
+            <p>Modelado y consultas para guardar y recuperar la información de cada aplicación.</p>
+            <div class="tech-list"><span>SQL</span><span>SQLite</span></div>
+          </article>
+          <article class="tech-panel" role="tabpanel" id="panel-herramientas" aria-labelledby="tab-herramientas">
+            <h4>Herramientas</h4>
+            <p>Trabajo colaborativo, documentación y despliegue.</p>
+            <div class="tech-list"><span>Git · GitHub</span><span>Docker</span><span>Swagger</span><span>Railway</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== 02 · PROYECTOS (sin tarjetas ni imágenes) ========== -->
+    <section class="section projects" id="proyectos">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div class="eyebrow">Proyectos</div>
+          <div>
+            <h2 class="type-title">Lo que he<br><em>construido.</em></h2>
+            <p class="project-intro">Algunos en equipo y otros por mi cuenta.</p>
+          </div>
+        </div>
+
+        <div class="project-list">
+          <article class="project reveal">
+            <span class="project-index">01</span>
+            <div class="project-content">
+              <h3>Flash-Bites</h3>
+              <div class="project-type">Personal · Gestión de negocio + asistente con IA</div>
+              <p>Aplicación full stack para gestionar productos, clientes, pedidos e inventario. Incluye un asistente
+                RAG que responde con información de documentos PDF y CSV del negocio.</p>
+              <div class="chips"><span class="chip">FastAPI</span><span class="chip">React</span><span
+                  class="chip">LangChain</span><span class="chip">ChromaDB</span><span class="chip">Docker</span></div>
+              <div class="project-links"><a class="project-link" href="https://github.com/Estefani-Cometa/Flash-Bites"
+                  target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Ver repositorio <span
+                    aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <span class="project-index">02</span>
+            <div class="project-content">
+              <h3>Vialtros</h3>
+              <div class="project-type">Académico · Equipo · Rutas escolares</div>
+              <p>Seguimiento GPS en tiempo real que conecta a administradores, conductores y familias. Proyecto
+                colaborativo con actualizaciones por WebSockets y autenticación JWT.</p>
+              <div class="chips"><span class="chip">React</span><span class="chip">Django REST</span><span
+                  class="chip">WebSockets</span><span class="chip">JWT</span></div>
+              <div class="project-links"><a class="project-link" href="https://github.com/Vialtros-ORG/Vialtros"
+                  target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Ver repositorio <span
+                    aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <span class="project-index">03</span>
+            <div class="project-content">
+              <h3>Vintra</h3>
+              <div class="project-type">Académico · Equipo · Gestión de residuos</div>
+              <p>Plataforma para gestionar rutas de recolección de residuos y mantener informada a la comunidad, con
+                WebSockets y autenticación JWT.</p>
+              <div class="chips"><span class="chip">React</span><span class="chip">NestJS</span><span
+                  class="chip">WebSockets</span><span class="chip">JWT</span></div>
+              <div class="project-links"><a class="project-link" href="https://github.com/Univalle-P-I/VINTRA"
+                  target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Ver repositorio <span
+                    aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <span class="project-index">04</span>
+            <div class="project-content">
+              <h3>MediFlow</h3>
+              <div class="project-type">Hackathon ONE G10 · No Country · Equipo</div>
+              <p>Agente inteligente que automatiza la clasificación, la extracción de datos y el enrutamiento de
+                documentos clínicos heterogéneos. Participé en la arquitectura y desarrollé el módulo IA Core:
+                contratos,
+                endpoints y validación de las respuestas del modelo.</p>
+              <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span
+                  class="chip">Pydantic</span><span class="chip">Git · GitHub</span></div>
+              <div class="project-links"><a class="project-link"
+                  href="https://github.com/No-Country-simulation/G10-MediFlow-Team11" target="_blank"
+                  rel="noopener noreferrer" data-cursor="Abrir">Ver repositorio <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <span class="project-index">05</span>
+            <div class="project-content">
+              <h3>Nose</h3>
+              <div class="project-type">Equipo · Recomendaciones contextuales</div>
+              <p>Plataforma para reducir la fatiga de decisión mediante recomendaciones contextuales.</p>
+              <div class="project-links"><a class="project-link" href="https://github.com/nose-systems/NOSE"
+                  target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Ver repositorio <span
+                    aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== 03 · TRAYECTORIA ========== -->
+    <section class="section shell" id="trayectoria">
+      <div class="section-head reveal">
+        <div class="eyebrow">Trayectoria</div>
+        <h2 class="type-title">Experiencia<br><em>y formación.</em></h2>
+      </div>
+
+      <div class="journey-grid">
+        <p class="journey-summary reveal">Estudio software y vengo de trabajos operativos. Cada camino me aportó algo
+          distinto.</p>
+        <div>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-date">2026</div>
+              <div>
+                <h3>Desarrolladora de software · No Country / Oracle Next Education &amp; Alura</h3>
+                <p>Módulo de IA Core con Python, FastAPI y Pydantic, y trabajo colaborativo con Git y GitHub.</p>
+                <p class="timeline-note"><strong>Logro:</strong> aporté a la arquitectura y al flujo de procesamiento de
+                  documentos clínicos con IA en MediFlow.</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-date">2026 — Actualidad</div>
+              <div>
+                <h3>Cofundadora y administradora · Flash Bites</h3>
+                <p>Finanzas, compras e inventario, pedidos, atención al cliente y marketing digital.</p>
+                <p class="timeline-note"><strong>Logro:</strong> procesos para controlar inventario, ventas y operación
+                  diaria.</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-date">2024 — 2026</div>
+              <div>
+                <h3>Asistente administrativa / Supervisora · Q' Ricuras</h3>
+                <p>Caja, reportes, inventario, coordinación de turnos y servicio al cliente.</p>
+                <p class="timeline-note"><strong>Logro:</strong> pasé de funciones comerciales y de caja a supervisión,
+                  y
+                  reduje faltantes con seguimiento de inventario.</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-date">2024 — 2027 · En curso</div>
+              <div>
+                <h3>Tecnología en Desarrollo de Software</h3>
+                <p>Universidad del Valle · Sede Buenaventura</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-date">2023</div>
+              <div>
+                <h3>Normalista Superior</h3>
+                <p>Institución Educativa Normal Superior Juan Ladrilleros</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="certs reveal">
+            <h3 class="certs-title">Certificaciones</h3>
+            <ul class="cert-grid">
+              <li class="cert-card">
+                <div>
+                  <h4>Ingeniería de Agentes y Automatización con IA</h4>
+                  <p>Alura Latam · 2026 · Completo</p>
+                </div>
+                <a class="cert-link" target="_blank" rel="noopener noreferrer" data-cursor="Abrir"
+                  href="https://app.aluracursos.com/user/francy-cometa/degree-ingenieria-de-agentes-y-automatizacion-con-ia-one-16190/certificate">Ver
+                  certificado ↗</a>
+              </li>
+              <li class="cert-card">
+                <div>
+                  <h4>Challenge Alura Agente</h4>
+                  <p>Reto práctico del programa de agentes de IA · Alura Latam · 2026</p>
+                </div>
+                <a class="cert-link" target="_blank" rel="noopener noreferrer" data-cursor="Abrir"
+                  href="https://app.aluracursos.com/certificate/48adcf4e-8471-4106-97c5-731b62daf713?lang">Ver
+                  certificado ↗</a>
+              </li>
+              <li class="cert-card">
+                <div>
+                  <h4>Fundamentos de IA: estructura y enfoques de sistemas inteligentes</h4>
+                  <p>Alura Latam · 2026</p>
+                </div>
+                <a class="cert-link" target="_blank" rel="noopener noreferrer" data-cursor="Abrir"
+                  href="https://app.aluracursos.com/certificate/457eb4f4-490f-48b0-a6d5-40c3128e1ca1?lang">Ver
+                  certificado ↗</a>
+              </li>
+              <li class="cert-card">
+                <div>
+                  <h4>IA para Desarrolladores (ChatGPT, Grok, Claude, Gemini)</h4>
+                  <p>Alura Latam &amp; Oracle · 2026</p>
+                </div>
+                <a class="cert-link" target="_blank" rel="noopener noreferrer" data-cursor="Abrir"
+                  href="https://app.aluracursos.com/certificate/652a7f72-9a25-4de8-bc48-222efe6ff2c4?lang">Ver
+                  certificado ↗</a>
+              </li>
+              <li class="cert-card">
+                <div>
+                  <h4>ONE · Inmersión Agentes de IA</h4>
+                  <p>Oracle Next Education · 2026</p>
+                </div>
+                <!-- REEMPLAZAR: pega aquí el enlace real de este certificado -->
+                <a class="cert-link" href="#">Ver certificado ↗</a>
+              </li>
+              <li class="cert-card">
+                <div>
+                  <h4>Oracle Cloud Infrastructure Certified AI Foundations Associate</h4>
+                  <p>Oracle Next Education · 2026</p>
+                </div>
+                <!-- REEMPLAZAR: pega aquí el enlace real de este certificado -->
+                <a class="cert-link" href="#">Ver certificado ↗</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== 04 · LITERATURA (sin imágenes) ========== -->
+    <section class="section shell" id="literatura">
+      <div class="section-head reveal">
+        <div class="eyebrow">Literatura</div>
+        <h2 class="type-title">Lo que leo,<br><em>fuera del código.</em></h2>
+      </div>
+
+      <div class="reading reveal">
+        <p class="about-lead">Leer es lo que hago cuando no estoy programando.</p>
+        <p class="reading-copy">Aquí iré compartiendo los libros que voy leyendo y lo que me dejan. Por ahora está
+          vacío, pero no va a seguir así por mucho tiempo.</p>
+        <span class="reading-note"><span class="pulse"></span> Próximamente: mis lecturas</span>
+      </div>
+    </section>
+
+
+    <!-- ========== 05 · CONTACTO ========== -->
+    <section class="contact shell" id="contacto">
+      <div class="contact-panel reveal">
+        <div>
+          <div class="eyebrow">Contacto</div>
+          <h2 class="type-title">Hablemos<em>.</em></h2>
+          <p>Si tienes una oportunidad junior, una práctica o un proyecto en el que pueda aportar, escríbeme. Me gustará
+            conocerlo, poner lo que ya sé y aprender lo que me falta.</p>
+          <div class="social-links">
+            <a href="https://github.com/Estefani-Cometa" target="_blank" rel="noopener noreferrer"
+              data-cursor="Abrir">GitHub ↗</a>
+            <a href="https://www.instagram.com/estefanicometa7/" target="_blank" rel="noopener noreferrer"
+              data-cursor="Abrir">Instagram ↗</a>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a class="button magnetic" href="mailto:stefhanycometa@gmail.com">Envíame un correo ↗</a>
+          <a class="button magnetic" href="https://www.linkedin.com/in/francy-estefani-cometa" target="_blank"
+            rel="noopener noreferrer">Conectemos en LinkedIn ↗</a>
+          <a class="button magnetic" href="assets/cv/CV-Francy-Estefani-Cometa.pdf" download>Descargar CV ↓</a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <span>© 2026 · Estefani Cometa</span>
+        <span>Hecho en Buenaventura <a href="#home">↑ Volver arriba</a></span>
+      </footer>
+    </section>
+  </main>
+
+
+  <!-- ========== DIÁLOGO DE CV ========== -->
+  <dialog class="cv-dialog" aria-labelledby="cv-title">
+    <article class="cv-sheet">
+      <div class="cv-toolbar">
+        <span>Vista previa del CV</span>
+        <button class="cv-close" type="button" aria-label="Cerrar vista del CV">×</button>
+      </div>
+
+      <header class="cv-header">
+        <div>
+          <p class="cv-overline">HOJA DE VIDA · 2026</p>
+          <h2 id="cv-title">Francy Estefani<br>Cometa Alomia</h2>
+          <p class="cv-role">Desarrolladora de software en formación · Python · FastAPI · React · IA aplicada</p>
+        </div>
+        <address>
+          Buenaventura, Valle del Cauca<br>
+          <a href="mailto:stefhanycometa@gmail.com">stefhanycometa@gmail.com</a><br>
+          <a href="https://www.linkedin.com/in/francy-estefani-cometa">linkedin.com/in/francy-estefani-cometa</a><br>
+          <a href="https://github.com/Estefani-Cometa">github.com/Estefani-Cometa</a>
+        </address>
+      </header>
+
+      <section class="cv-section">
+        <h3>Perfil profesional</h3>
+        <p>Desarrolladora de software en formación, en sexto semestre de Tecnología en Desarrollo de Software, con
+          experiencia práctica en desarrollo full stack con Python, FastAPI, React y bases de datos SQL. He integrado IA
+          generativa mediante RAG, LangChain y ChromaDB, con conocimientos en APIs REST, Docker, Git y GitHub.</p>
+        <p>Sumo más de dos años de experiencia en funciones administrativas, comerciales, atención al cliente, caja,
+          inventarios y supervisión de personal, lo que me permite comprender procesos de negocio y aportar soluciones
+          tecnológicas a necesidades reales. Me caracterizo por la capacidad de aprendizaje, trabajo en equipo,
+          autonomía, organización y adaptación. Me interesan el desarrollo de software, la IA, la automatización y la
+          literatura.</p>
+      </section>
+
+      <section class="cv-section">
+        <h3>Experiencia laboral</h3>
+        <p><strong>Desarrolladora de software · No Country / Oracle Next Education &amp; Alura</strong>
+          <span>2026</span><br>Módulo de IA Core con Python, FastAPI y Pydantic: contratos, endpoints y validación de
+          respuestas de IA. Git y GitHub. <em>Logro:</em> contribución a MediFlow, en la arquitectura y el flujo de
+          procesamiento de documentos clínicos con IA.
+        </p>
+        <p><strong>Cofundadora y administradora · Flash Bites</strong> <span>2026 — Actualidad</span><br>Finanzas,
+          compras e inventario, pedidos y ventas, atención al cliente y marketing digital. <em>Logro:</em> procesos para
+          controlar inventario, ventas y operación diaria.</p>
+        <p><strong>Asistente administrativa / Supervisora / Cajera / Vendedora · Q' Ricuras</strong> <span>2024 —
+            2026</span><br>Caja, reportes, coordinación de personal y turnos, inventarios y atención al cliente.
+          <em>Logro:</em> progresión hasta supervisión y menos faltantes con seguimiento de inventario.
+        </p>
+      </section>
+
+      <section class="cv-section">
+        <h3>Proyectos</h3>
+        <p><strong>Flash-Bites.</strong> App full stack con asistente RAG sobre PDF y CSV. FastAPI, React, LangChain,
+          ChromaDB, SQLite y Docker. <a href="https://github.com/Estefani-Cometa/Flash-Bites">Repositorio ↗</a></p>
+        <p><strong>Vialtros.</strong> Plataforma SaaS de rutas escolares con GPS, WebSockets y JWT. React y Django REST.
+          <a href="https://github.com/Vialtros-ORG/Vialtros">Repositorio ↗</a>
+        </p>
+        <p><strong>Vintra.</strong> Plataforma para gestionar rutas de recolección de residuos y mantener informada a la
+          comunidad. WebSockets y JWT. React y NestJS.
+          <a href="https://github.com/Univalle-P-I/VINTRA">Repositorio ↗</a>
+        </p>
+        <p><strong>MediFlow.</strong> Agente inteligente desarrollado para el Hackathon de Oracle Next Education (ONE)
+          G10.
+          Automatiza la clasificación, extracción de datos y enrutamiento de documentos clínicos heterogéneos.
+          <a href="https://github.com/No-Country-simulation/G10-MediFlow-Team11">Repositorio ↗</a>
+        </p>
+        <p><strong>NOSE.</strong> Plataforma para reducir la fatiga de decisión mediante recomendaciones contextuales.
+          <a href="https://github.com/nose-systems/NOSE">Repositorio ↗</a>
+        </p>
+      </section>
+
+      <section class="cv-section cv-two-col">
+        <div>
+          <h3>Estudios</h3>
+          <p><strong>Tecnología en Desarrollo de Software</strong><br>Universidad del Valle · 2027 · En curso</p>
+          <p><strong>Normalista Superior</strong><br>I.E. Normal Superior Juan Ladrilleros · 2023</p>
+          <p><strong>Ingeniería de Agentes y Automatización con IA</strong><br>Alura Latam · 2026</p>
+          <p><strong>Oracle Cloud Infrastructure Certified AI Foundations Associate</strong><br>Oracle Next Education ·
+            2026</p>
+        </div>
+        <div>
+          <h3>Cursos y certificaciones</h3>
+          <p>Challenge Alura Agente · Fundamentos de IA · IA para Desarrolladores (Alura Latam &amp; Oracle)</p>
+          <h3>Idiomas</h3>
+          <p>Español nativo · Inglés intermedio</p>
+        </div>
+      </section>
+
+      <div class="cv-actions">
+        <a class="button primary" href="assets/cv/CV-Francy-Estefani-Cometa.pdf" download>Descargar CV en PDF <span
+            aria-hidden="true">↓</span></a>
+        <button class="button cv-print" type="button">Imprimir</button>
+        <button class="button cv-close-secondary" type="button">Seguir explorando</button>
+      </div>
+    </article>
+  </dialog>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>
